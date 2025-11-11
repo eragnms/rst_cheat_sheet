@@ -1,0 +1,500 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>reStructuredText cheat sheet &mdash; reStructuredText cheat sheet</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to the reStructuredText cheat sheet" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            reStructuredText cheat sheet
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">reStructuredText cheat sheet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#common-conventions">Common Conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#headings">Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cross-references">Cross-references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#index-entries">Index entries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tables">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#editing-box-drawing-diagrams-in-emacs">Editing Box-Drawing Diagrams in Emacs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#check-or-enforce-utf-8">Check or enforce UTF-8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#insert-box-drawing-characters">Insert box-drawing characters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#common-characters">Common characters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quick-editing-tips">Quick editing tips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#template-box-copy-and-fill-in">Template box (copy and fill in)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reusable-box-templates-yasnippet-or-tempo">Reusable Box Templates (Yasnippet or Tempo)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#yasnippet-setup">Yasnippet setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tempo-setup-alternative">Tempo setup (alternative)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#customization-tips">Customization tips</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#notes-warnings-and-tips">Notes, Warnings, and Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-blocks">Code Blocks</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">reStructuredText cheat sheet</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">reStructuredText cheat sheet</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/rst_cheat_sheet.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="restructuredtext-cheat-sheet">
+<h1>reStructuredText cheat sheet<a class="headerlink" href="#restructuredtext-cheat-sheet" title="Link to this heading"></a></h1>
+<p id="index-0">This section summarizes commonly used reStructuredText (RST) and Sphinx syntax for
+editing and maintaining documentation.</p>
+<section id="common-conventions">
+<h2>Common Conventions<a class="headerlink" href="#common-conventions" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">code-block::</span> <span class="pre">bash</span></code> for shell commands.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">code-block::</span> <span class="pre">python</span></code> for code examples.</p></li>
+<li><p>Inline code or filenames: <code class="docutils literal notranslate"><span class="pre">example.py</span></code></p></li>
+<li><p>Bold and italics: <strong>bold</strong>, <em>italic</em></p></li>
+<li><p>Lists:
+- Unordered: <code class="docutils literal notranslate"><span class="pre">-</span></code> or <code class="docutils literal notranslate"><span class="pre">*</span></code>
+- Ordered: <code class="docutils literal notranslate"><span class="pre">1.</span></code> <code class="docutils literal notranslate"><span class="pre">2.</span></code> etc.</p></li>
+<li><p>Avoid overusing raw HTML; Sphinx supports nearly all formatting needs natively.</p></li>
+</ul>
+<p><strong>Rule of thumb:</strong> aim for 2–5 index entries per RST file, more only for
+very technical chapters (like <code class="docutils literal notranslate"><span class="pre">usage.rst</span></code>).</p>
+</section>
+<section id="headings">
+<h2>Headings<a class="headerlink" href="#headings" title="Link to this heading"></a></h2>
+<p>Our heading hierarchy follows this exact order:</p>
+<ul class="simple">
+<li><p>Top Level (e.g. document title) =</p></li>
+<li><p>Second Level -</p></li>
+<li><p>Third Level +</p></li>
+<li><p>Fourth Level #</p></li>
+<li><p>Fifth Level “</p></li>
+</ul>
+<p>Always keep the underline <strong>at least as long as</strong> the heading text.</p>
+</section>
+<section id="cross-references">
+<h2>Cross-references<a class="headerlink" href="#cross-references" title="Link to this heading"></a></h2>
+<p id="index-1">References connect sections or terms so they can be linked from elsewhere.</p>
+<p><strong>Internal section reference</strong></p>
+<ol class="arabic">
+<li><p>Define a label before the heading:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_my-section-label:</span>
+
+<span class="gh">My Section Title</span>
+<span class="gh">----------------</span>
+</pre></div>
+</div>
+</li>
+<li><p>Refer to it from anywhere using:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>See <span class="na">:ref:</span><span class="nv">`my-section-label`</span> for details.
+</pre></div>
+</div>
+</li>
+</ol>
+<p><strong>File reference</strong></p>
+<blockquote>
+<div><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:doc:</span><span class="nv">`../path/to/other_file`</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Inline hyperlink</strong></p>
+<blockquote>
+<div><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>The <span class="s">`Sphinx documentation </span><span class="si">&lt;https://www.sphinx-doc.org/&gt;</span><span class="s">`_</span> is excellent.
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="index-entries">
+<h2>Index entries<a class="headerlink" href="#index-entries" title="Link to this heading"></a></h2>
+<p id="index-2">Use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">index::</span></code> to add searchable keywords.</p>
+<p><strong>Examples:</strong></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">index</span><span class="p">::</span>
+   single: Docker; build container
+   pair: direction of arrival; DoA
+   triple: machine learning; classification; examples
+</pre></div>
+</div>
+<p>Place index entries <strong>immediately below</strong> the relevant section title for accurate linking.</p>
+<p><strong>Index only what’s useful</strong></p>
+<ul class="simple">
+<li><p>Do not index every heading or parameter.</p></li>
+<li><p>Index <strong>concepts people might look up later</strong> such as tools, algorithms,
+file formats, configuration options, and important scripts.</p></li>
+</ul>
+<p><strong>Use specific keywords</strong></p>
+<ul class="simple">
+<li><p>Prefer concrete terms: <code class="docutils literal notranslate"><span class="pre">CFAR-DoA</span></code> or <code class="docutils literal notranslate"><span class="pre">Hailo-8L</span></code> instead of <code class="docutils literal notranslate"><span class="pre">code</span></code> or
+<code class="docutils literal notranslate"><span class="pre">setup</span></code>.</p></li>
+</ul>
+<p><strong>Group related terms</strong></p>
+<ul>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">;</span></code> to build hierarchy:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">index</span><span class="p">::</span>
+   single: audio; conversion
+   single: audio; resampling
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>Use pairs/triples for synonyms</strong></p>
+<ul>
+<li><p>If a concept has multiple names, use <code class="docutils literal notranslate"><span class="pre">pair</span></code> or <code class="docutils literal notranslate"><span class="pre">triple</span></code> so it appears in
+all relevant places in the index:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">index</span><span class="p">::</span>
+   pair: direction of arrival; DoA
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>Index tools, not every option</strong></p>
+<ul class="simple">
+<li><p>For commands or scripts, add one index entry for the tool.</p></li>
+<li><p>Avoid indexing every CLI flag—search handles that.</p></li>
+</ul>
+</section>
+<section id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Link to this heading"></a></h2>
+<p id="index-3">Use <strong>grid tables</strong> for clarity and column alignment.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>+----------------+----------------+----------------+
+<span class="o">|</span> Column A       | Column B       | Column C       |
++================+================+================+
+<span class="o">|</span> Item 1         | Description 1  | Value 1        |
++----------------+----------------+----------------+
+<span class="o">|</span> Item 2         | Description 2  | Value 2        |
++----------------+----------------+----------------+
+</pre></div>
+</div>
+<p><strong>Tips:</strong></p>
+<ul class="simple">
+<li><p>Align <code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">|</span></code> vertically for clean rendering.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">=</span></code> in the header separator row.</p></li>
+<li><p>Use monospace font (<code class="docutils literal notranslate"><span class="pre">code-block</span></code>) when showing RST examples.</p></li>
+</ul>
+</section>
+<section id="editing-box-drawing-diagrams-in-emacs">
+<h2>Editing Box-Drawing Diagrams in Emacs<a class="headerlink" href="#editing-box-drawing-diagrams-in-emacs" title="Link to this heading"></a></h2>
+<p id="index-4">When editing Unicode box-drawing diagrams in <strong>Emacs</strong> or <strong>Doom Emacs</strong>, make sure
+your buffer is in UTF-8 encoding and that you use a monospace font for alignment.</p>
+<section id="check-or-enforce-utf-8">
+<h3>Check or enforce UTF-8<a class="headerlink" href="#check-or-enforce-utf-8" title="Link to this heading"></a></h3>
+<p>Most modern Emacs configurations (including Doom) default to UTF-8, but you can
+verify or set it manually:</p>
+<div class="highlight-elisp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">setq-default</span><span class="w"> </span><span class="nv">buffer-file-coding-system</span><span class="w"> </span><span class="ss">&#39;utf-8-unix</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If a file opens in another encoding, fix it interactively:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>C-x RET f utf-8 RET
+</pre></div>
+</div>
+</section>
+<section id="insert-box-drawing-characters">
+<h3>Insert box-drawing characters<a class="headerlink" href="#insert-box-drawing-characters" title="Link to this heading"></a></h3>
+<p>You can insert any Unicode character by name or code point:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>C-x 8 RET BOX DRAWINGS LIGHT HORIZONTAL RET
+C-x 8 RET 2500 RET
+</pre></div>
+</div>
+<p>This inserts <code class="docutils literal notranslate"><span class="pre">─</span></code>.</p>
+</section>
+<section id="common-characters">
+<h3>Common characters<a class="headerlink" href="#common-characters" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Symbol</p></th>
+<th class="head"><p>Code</p></th>
+<th class="head"><p>Insert command</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">─</span></code>
+<code class="docutils literal notranslate"><span class="pre">│</span></code>
+<code class="docutils literal notranslate"><span class="pre">┌</span></code>
+<code class="docutils literal notranslate"><span class="pre">┐</span></code>
+<code class="docutils literal notranslate"><span class="pre">└</span></code>
+<code class="docutils literal notranslate"><span class="pre">┘</span></code>
+<code class="docutils literal notranslate"><span class="pre">┬</span></code>
+<code class="docutils literal notranslate"><span class="pre">┴</span></code>
+<code class="docutils literal notranslate"><span class="pre">┼</span></code></p></td>
+<td><p>U+2500
+U+2502
+U+250C
+U+2510
+U+2514
+U+2518
+U+252C
+U+2534
+U+253C</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C-x</span> <span class="pre">8</span> <span class="pre">RET</span> <span class="pre">2500</span> <span class="pre">RET</span></code>
+<code class="docutils literal notranslate"><span class="pre">C-x</span> <span class="pre">8</span> <span class="pre">RET</span> <span class="pre">2502</span> <span class="pre">RET</span></code>
+<code class="docutils literal notranslate"><span class="pre">C-x</span> <span class="pre">8</span> <span class="pre">RET</span> <span class="pre">250C</span> <span class="pre">RET</span></code>
+<code class="docutils literal notranslate"><span class="pre">C-x</span> <span class="pre">8</span> <span class="pre">RET</span> <span class="pre">2510</span> <span class="pre">RET</span></code>
+<code class="docutils literal notranslate"><span class="pre">C-x</span> <span class="pre">8</span> <span class="pre">RET</span> <span class="pre">2514</span> <span class="pre">RET</span></code>
+<code class="docutils literal notranslate"><span class="pre">C-x</span> <span class="pre">8</span> <span class="pre">RET</span> <span class="pre">2518</span> <span class="pre">RET</span></code>
+<code class="docutils literal notranslate"><span class="pre">C-x</span> <span class="pre">8</span> <span class="pre">RET</span> <span class="pre">252C</span> <span class="pre">RET</span></code>
+<code class="docutils literal notranslate"><span class="pre">C-x</span> <span class="pre">8</span> <span class="pre">RET</span> <span class="pre">2534</span> <span class="pre">RET</span></code>
+<code class="docutils literal notranslate"><span class="pre">C-x</span> <span class="pre">8</span> <span class="pre">RET</span> <span class="pre">253C</span> <span class="pre">RET</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Alternatively, run:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>M-x insert-char RET box draw RET
+</pre></div>
+</div>
+<p>and select from the interactive menu.</p>
+</section>
+<section id="quick-editing-tips">
+<h3>Quick editing tips<a class="headerlink" href="#quick-editing-tips" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Use <strong>spaces</strong> (not tabs) for alignment.</p></li>
+<li><p>Ensure you are in a <strong>monospace</strong> buffer. In Doom Emacs, you can toggle variable
+pitch fonts off with <code class="docutils literal notranslate"><span class="pre">SPC</span> <span class="pre">t</span> <span class="pre">v</span></code>.</p></li>
+<li><p>Copy and reuse template boxes instead of redrawing them each time.</p></li>
+</ul>
+</section>
+<section id="template-box-copy-and-fill-in">
+<h3>Template box (copy and fill in)<a class="headerlink" href="#template-box-copy-and-fill-in" title="Link to this heading"></a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>┌────────────────────────────┐
+│   Example process step     │
+└────────────────────────────┘
+</pre></div>
+</div>
+<p>This makes it easy to maintain consistent visual flow diagrams directly inside
+your <code class="docutils literal notranslate"><span class="pre">.rst</span></code> files without any external graphics tools.</p>
+</section>
+<section id="reusable-box-templates-yasnippet-or-tempo">
+<h3>Reusable Box Templates (Yasnippet or Tempo)<a class="headerlink" href="#reusable-box-templates-yasnippet-or-tempo" title="Link to this heading"></a></h3>
+<p id="index-5">If you frequently add diagrams, you can automate box creation using
+<strong>Yasnippet</strong> (bundled with Doom Emacs) or the built-in <strong>tempo</strong> snippet system.</p>
+</section>
+<section id="yasnippet-setup">
+<h3>Yasnippet setup<a class="headerlink" href="#yasnippet-setup" title="Link to this heading"></a></h3>
+<p>Yasnippet allows you to expand a keyword into a pre-defined text pattern.</p>
+<ol class="arabic">
+<li><p>Open your snippets folder (default for Doom):</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>~/.doom.d/snippets/text-mode/
+</pre></div>
+</div>
+<p>Create it if it doesn’t exist.</p>
+</li>
+<li><p>Add a new snippet file, for example <code class="docutils literal notranslate"><span class="pre">box</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># -*- mode: snippet -*-
+# name: Box diagram template
+# key: box
+# --
+┌────────────────────────────┐
+│  ${1:Your process step}    │
+└────────────────────────────┘
+$0
+</pre></div>
+</div>
+</li>
+<li><p>Reload snippets:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>M-x yas-reload-all
+</pre></div>
+</div>
+</li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">box</span></code> in any buffer and press <code class="docutils literal notranslate"><span class="pre">TAB</span></code> → a box appears with an editable field.</p></li>
+</ol>
+</section>
+<section id="tempo-setup-alternative">
+<h3>Tempo setup (alternative)<a class="headerlink" href="#tempo-setup-alternative" title="Link to this heading"></a></h3>
+<p>If you prefer Emacs’ built-in <strong>tempo templates</strong>, add this to your Doom config:</p>
+<div class="highlight-elisp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">require</span><span class="w"> </span><span class="ss">&#39;tempo</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nv">tempo-define-template</span>
+<span class="w"> </span><span class="s">&quot;box&quot;</span>
+<span class="w"> </span><span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;┌────────────────────────────┐\n&quot;</span>
+<span class="w">   </span><span class="s">&quot;│  &quot;</span><span class="w"> </span><span class="nv">p</span><span class="w"> </span><span class="s">&quot;  │\n&quot;</span>
+<span class="w">   </span><span class="s">&quot;└────────────────────────────┘\n&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="s">&quot;box&quot;</span>
+<span class="w"> </span><span class="s">&quot;Insert a Unicode box diagram.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then restart Emacs or evaluate the code (<code class="docutils literal notranslate"><span class="pre">M-x</span> <span class="pre">eval-buffer</span></code>).
+Now you can type:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>M-x tempo-template-box
+</pre></div>
+</div>
+<p>and insert a ready-made box anywhere.</p>
+</section>
+<section id="customization-tips">
+<h3>Customization tips<a class="headerlink" href="#customization-tips" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>You can create variants (e.g., <code class="docutils literal notranslate"><span class="pre">flowbox</span></code> or <code class="docutils literal notranslate"><span class="pre">doublebox</span></code>) with wider lines.</p></li>
+<li><p>Add these snippets to version control in your Doom config for easy sharing.</p></li>
+<li><p>Yasnippet placeholders like <code class="docutils literal notranslate"><span class="pre">${1:Text}</span></code> support tab-cycling between editable fields.</p></li>
+<li><p>All snippets support UTF-8 box characters directly—no special input method required.</p></li>
+</ul>
+<p>These small helpers make it easy to document process flows or architecture diagrams
+right from within Emacs while keeping the style consistent across <cite>.rst</cite> files.</p>
+</section>
+</section>
+<section id="notes-warnings-and-tips">
+<h2>Notes, Warnings, and Tips<a class="headerlink" href="#notes-warnings-and-tips" title="Link to this heading"></a></h2>
+<p id="index-6">Admonitions help highlight important notes:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+   This is a note.
+
+<span class="p">..</span> <span class="ow">warning</span><span class="p">::</span>
+   This is a warning.
+
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span>
+   This is a tip.
+</pre></div>
+</div>
+<p>They render with icons and borders in HTML output.</p>
+</section>
+<section id="images">
+<h2>Images<a class="headerlink" href="#images" title="Link to this heading"></a></h2>
+<p id="index-7">Images are inserted with the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">image::</span></code> or <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">figure::</span></code> directives.</p>
+<p><strong>Basic image:</strong></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> _static/example.png
+   <span class="nc">:alt:</span> Example image
+   <span class="nc">:width:</span> 400px
+   <span class="nc">:align:</span> center
+</pre></div>
+</div>
+<p><strong>With caption (use ``figure``):</strong></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> _static/diagram.png
+   <span class="nc">:alt:</span> System architecture
+   <span class="nc">:width:</span> 80%
+   <span class="nc">:align:</span> center
+
+   System architecture overview.
+</pre></div>
+</div>
+<p><strong>Notes:</strong></p>
+<ul class="simple">
+<li><p>Images are usually stored in the <code class="docutils literal notranslate"><span class="pre">_static</span></code> directory.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">:width:</span></code> in pixels or percent for scaling.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:align:</span> <span class="pre">center</span></code> or <code class="docutils literal notranslate"><span class="pre">:align:</span> <span class="pre">right</span></code> controls placement.</p></li>
+<li><p>Always include <code class="docutils literal notranslate"><span class="pre">:alt:</span></code> text for accessibility.</p></li>
+</ul>
+</section>
+<section id="code-blocks">
+<h2>Code Blocks<a class="headerlink" href="#code-blocks" title="Link to this heading"></a></h2>
+<p id="index-8">Code blocks are used to show code or console examples with proper syntax highlighting.</p>
+<p><strong>Generic code block:</strong></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
+   def hello(name):
+       print(f&quot;Hello, {name}!&quot;)
+
+<span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> bash
+   echo &quot;Hello, world!&quot;
+</pre></div>
+</div>
+<p><strong>Key points:</strong></p>
+<ul>
+<li><p>The language name after <code class="docutils literal notranslate"><span class="pre">code-block::</span></code> controls highlighting
+(e.g. <code class="docutils literal notranslate"><span class="pre">python</span></code>, <code class="docutils literal notranslate"><span class="pre">bash</span></code>, <code class="docutils literal notranslate"><span class="pre">json</span></code>, <code class="docutils literal notranslate"><span class="pre">ini</span></code>).</p></li>
+<li><p>Indentation is <strong>required</strong> — the content must be indented under the directive.</p></li>
+<li><p>Inline code uses double backticks: <code class="docutils literal notranslate"><span class="pre">print(&quot;Hi&quot;)</span></code>.</p></li>
+<li><p>For literal, unformatted text (no highlighting), use <code class="docutils literal notranslate"><span class="pre">::</span></code> at the end of a paragraph:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Example<span class="se">::</span>
+
+<span class="s">   This text is shown exactly as typed.</span>
+<span class="s">   Useful for quick terminal snippets or pseudo-code.</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>Tips:</strong></p>
+<ul>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">code-block::</span> <span class="pre">rst</span></code> when demonstrating reStructuredText syntax.</p></li>
+<li><p>Keep lines under ~80 characters to avoid rendering issues in narrow layouts.</p></li>
+<li><p>To highlight specific lines, add <code class="docutils literal notranslate"><span class="pre">:emphasize-lines:</span></code>:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
+   <span class="nc">:emphasize-lines:</span> 2
+
+   def main():
+       print(&quot;Important line!&quot;)
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to the reStructuredText cheat sheet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, MicroComp Nordic AB.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
